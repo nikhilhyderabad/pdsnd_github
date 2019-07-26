@@ -13,6 +13,12 @@ This project uses three Data Files containing the city data
 2. new_york_city.csv
 3. washington.csv
 
+### Softwares Required
+To complete this project the following softwares were used-
+1. Python 3, NumPy, and pandas installed using Anaconda
+2. A text editor, like Atom
+3. A terminal application (Terminal on Mac and Linux or Cygwin on Windows)
+
 ### Credits
 The below sources were used for development of this project -
 1. https://www.udacity.com
