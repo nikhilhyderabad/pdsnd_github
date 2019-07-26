@@ -14,4 +14,6 @@ This project uses three Data Files containing the city data
 3. washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The below sources were used for development of this project -
+1. https://www.udacity.com
+2. https://stackoverflow.com/
