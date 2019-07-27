@@ -131,7 +131,7 @@ def trip_duration_stats(df):
     
     print('\nNow we will see some statistics related to trip duration...\n')
     total_travel_time = df['Trip Duration'].sum()
-    #divide by 60 to convert seconds in raw data to minutes
+    #divide by 60 to convert seconds in raw data to minutes and round the time to two decimal places
     print('Total travel time in minutes: ', round(total_travel_time/60 ,2))
     
     mean_travel_time = df['Trip Duration'].mean()
