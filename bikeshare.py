@@ -77,16 +77,16 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
     
     # display some raw data to the user if the user wants to see
-    raw_data_check = input('\nDo you want to see first five lines of raw data. Enter yes or no: ')
+    raw_data_check = input('\nDo you want to see first five lines of raw data. Enter Y or N: ')
     i=5
-    if raw_data_check.lower() == 'yes':
+    if raw_data_check.lower() == 'y':
         while True:
             raw_data = df.head(i)
             print(raw_data)
             #increment counter for 5 more records
             i=i+5 
-            more_data = input('\nDo you want to see five records more this time. Enter yes or no: ')
-            if more_data.lower() != 'yes':
+            more_data = input('\nDo you want to see five records more this time. Enter Y or N: ')
+            if more_data.lower() != 'y':
                 break
 
     return df
@@ -131,11 +131,11 @@ def trip_duration_stats(df):
     
     print('\nNow we will see some statistics related to trip duration...\n')
     total_travel_time = df['Trip Duration'].sum()
-    #divide by 60 to convert seconds in raw data to minutes
-    print('Total travel time in minutes: ', total_travel_time/60)
+    #divide by 60 to convert seconds in raw data to minutes and round the time to two decimal places
+    print('Total travel time in minutes: ', round(total_travel_time/60 ,2))
     
     mean_travel_time = df['Trip Duration'].mean()
-    print('Mean travel time in minutes: ', mean_travel_time/60)
+    print('Mean travel time in minutes: ', round(mean_travel_time/60, 2))
     print('-'*40)
     
     
@@ -170,8 +170,8 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         
-        restart = input('\nDo you want to see similar stats with different inputs? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nDo you want to see similar stats with different inputs? Enter Y or N.\n')
+        if restart.lower() != 'y':
             break
             
 if __name__ == "__main__":
