@@ -132,10 +132,10 @@ def trip_duration_stats(df):
     print('\nNow we will see some statistics related to trip duration...\n')
     total_travel_time = df['Trip Duration'].sum()
     #divide by 60 to convert seconds in raw data to minutes
-    print('Total travel time in minutes: ', total_travel_time/60)
+    print('Total travel time in minutes: ', round(total_travel_time/60 ,2))
     
     mean_travel_time = df['Trip Duration'].mean()
-    print('Mean travel time in minutes: ', mean_travel_time/60)
+    print('Mean travel time in minutes: ', round(mean_travel_time/60, 2))
     print('-'*40)
     
     
